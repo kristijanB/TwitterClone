@@ -1,5 +1,7 @@
 package com.example.twitterclone
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.TextInputLayout
@@ -12,6 +14,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import java.lang.Exception
 
 class   LoginActivity : AppCompatActivity() {
 
@@ -23,6 +26,7 @@ class   LoginActivity : AppCompatActivity() {
             finish()
         }
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +56,7 @@ class   LoginActivity : AppCompatActivity() {
     }
 
     fun onLogin(v: View){
-        var procede=true;
+        var procede=true
         if (emailET.text.isNullOrEmpty()){
             emailTIL.error="Email is required"
             emailTIL.isErrorEnabled=true
@@ -72,7 +76,7 @@ class   LoginActivity : AppCompatActivity() {
                         Toast.makeText(this@LoginActivity,"Login error: ${task.exception?.localizedMessage}", Toast.LENGTH_SHORT).show()
                     }
                 }
-                .addOnFailureListener{exception ->
+                .addOnFailureListener{exception: Exception ->
                     exception.printStackTrace()
                     loginProgressLayout.visibility=View.GONE
                 }
@@ -90,5 +94,9 @@ class   LoginActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         firebaseAuth.removeAuthStateListener { firebaseAuthListener }
+    }
+
+    companion object {
+        fun newIntent(context: Context)= Intent(context, LoginActivity::class.java)
     }
 }
