@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "529555807447",
+    "firebase_url": "https://twitterclonenew.firebaseio.com",
+    "project_id": "twitterclonenew",
+    "storage_bucket": "twitterclonenew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529555807447:android:df77dd251eca141a",
+        "android_client_info": {
+          "package_name": "com.example.twitterclonenew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529555807447-ttnqfgfjl6buvmb32t05hievna4sd7dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLQj2lhObkG7068xIOFWZECXLtQ7h124o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529555807447-ttnqfgfjl6buvmb32t05hievna4sd7dq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
